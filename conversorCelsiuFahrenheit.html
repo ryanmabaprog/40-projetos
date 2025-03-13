@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <style>
+        body{
+            background: rgb(172,190,120);
+            background: linear-gradient(90deg, rgba(172,190,120,0.258) 0%, rgba(9,121,112,0.277) 35%, rgba(0,212,255,0.210) 100%);
+        }
+
+        #container{
+            background-color: white;
+            height: 500px;
+            width: 300px;
+            text-align: center;
+            margin: auto;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 50px;
+        }
+
+        .inputCel, .inputFah {
+            height: 50px;
+            width: 150px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+            margin-top: 50px;
+        }
+
+        #button {
+            height: 50px;
+            width: 150px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+            margin-top: 50px;
+        }
+
+        #temp {
+            margin-top: 30px;
+        }
+
+        #result {
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="celsius" class="inputCel" placeholder="Celsius">
+        <input type="text" id="fahrenheit" class="inputFah" placeholder="Fahrenheit">
+        <button id="button">Calcular</button><br>
+        <select name="temperature" id="temp">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select><br>
+        <label id="result">Resultado:</label>
+    </div>
+
+    <script>
+        const calculo_btn = document.getElementById("button");
+
+        calculo_btn.addEventListener("click", () => {
+            const temperatura = document.getElementById('temp').value;
+            const celsius = parseFloat(document.getElementById('celsius').value);
+            const fahrenheit = parseFloat(document.getElementById('fahrenheit').value);
+            const result = document.getElementById("result");
+
+            if (temperatura === "celsius") {
+                if (isNaN(fahrenheit)) {
+                    result.innerText = "Digite um valor válido em Fahrenheit!";
+                    return;
+                }
+                let valueCelsius = (fahrenheit - 32) / 1.8;
+                result.innerText = `Celsius: ${valueCelsius.toFixed(2)}°C`;
+            } 
+            else if (temperatura === "fahrenheit") {
+                if (isNaN(celsius)) {
+                    result.innerText = "Digite um valor válido em Celsius!";
+                    return;
+                }
+                let valueFahr = (celsius * 9 / 5) + 32;
+                result.innerText = `Fahrenheit: ${valueFahr.toFixed(2)}°F`;
+            }
+        });
+    </script>
+</body>
+</html>
