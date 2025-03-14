@@ -1,0 +1,41 @@
+body{
+    background-color: burlywood;
+}
+
+#containerBtn{
+    display: flex;
+    justify-content: center;
+}
+
+#clickBtn{
+    width: 250px;
+    height: 100px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+#clickBtn:hover{
+    background-color: rgb(185, 215, 241);
+}
+
+#clickCount{
+    margin: auto;
+    margin-top: 50px;
+    width: 120px;
+    height: 50px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px rgb(78, 77, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#clickerLabel{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 70px;
+}
