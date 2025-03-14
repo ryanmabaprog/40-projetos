@@ -1,0 +1,27 @@
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz o body ocupar toda a tela */
+    margin: 0; /* Remove margens padrão */
+}
+
+#clock {
+    background-color: rgb(230, 241, 241);
+    height: 300px;
+    width: 600px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+}
+
+#time {
+    text-align: center;
+    font-size: 6rem; /* Ajuste o tamanho do texto */
+    font-family: monospace;
+    color: rgb(44, 27, 117);
+}
